@@ -32,9 +32,6 @@ public class OAuthController : ControllerBase
             restRequest.AddParameter("client_secret", OAuthConstant.CLIENT_SECRET);
             restRequest.AddParameter("scope", OAuthConstant.SCOPES);
             restRequest.AddParameter("redirect_uri", OAuthConstant.REDIRECT_URL);
-            //restRequest.AddParameter("code_verifier", OAuthConstant.CODE_VERIFIER); // Include the code verifier
-            //restRequest.AddParameter("code_challenge", OAuthConstant.CODE_CHALLENGE); // Include the code challenge
-            //restRequest.AddParameter("code_challenge_method", "S256");
 
             RestResponse response = await restClient.ExecuteAsync(restRequest);
 
